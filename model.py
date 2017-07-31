@@ -3,9 +3,14 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
-class YourModel(Base):
-    __tablename__  = 'yourmodel'
-    id             = Column(Integer, primary_key=True)
+
+User(Base):
+	__tablename__= 'user'
+	id = Column(Integer, primary_key= True)
+	full_name= Column(String)
+	username= Column(String)
+	password = Column(String)
+	museum_choice = Column(String)
     # ADD YOUR FIELD BELOW ID
 
 # IF YOU NEED TO CREATE OTHER TABLE 
