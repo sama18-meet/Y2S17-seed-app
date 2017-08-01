@@ -37,11 +37,20 @@ def sign_up():
 		session.commit()
 		return render_template ('my_feed.html')
 
+
 @app.route('/my_feed/<int:user_id>/') 
 def my_feed():
-	pieces = session.query(Piece).all()
+	favorites_pieces = []
+	if user.museum_literature == True:
+		favorites_pieces.append(museum_literature)
+	if user.museum_photography == True:
+		favorites_pieces.append(museum_photography)
+	if user.museum_painting == True:
+		favorites_pieces.append(museum_painting)		
+	pieces = session.query(Piece).filter_by(favorites_pieces)
 	return render_template('my_feed.html',pieces=pieces)
 @app.route('/profile/<int:user_id>/')
+
 def profile():
 	user_pieces=session.query(Piece).filter_by(id=user_id)
 	return render_template ('my_profile.html')
