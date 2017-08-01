@@ -1,4 +1,5 @@
-from sqlalchemy import Column, DateTime, Integer, String, Boolean
+from sqlalchemy import Column, DateTime, Integer, String, Boolean, ForeignKey
+from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
@@ -14,13 +15,13 @@ class User(Base):
 	post = relationship("Post")
     # ADD YOUR FIELD BELOW ID
 
-class Post(Base):
-	__tablename__= 'post'
+class Piece(Base):
+	__tablename__= 'Piece'
 	id = Column(Integer, primary_key=True)
 	title = Column(String)
-	museum-Music = Column(Boolean)
-	museum-Photography = Column(Boolean)
-	museum-Painting = Column(Boolean)
+	museum_Music = Column(Boolean)
+	museum_Photography = Column(Boolean)
+	museum_Painting = Column(Boolean)
 	description = Column(String)
 	pic_url = Column(String)
 	likes = Column(Integer)
