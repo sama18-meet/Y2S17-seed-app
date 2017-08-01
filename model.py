@@ -9,17 +9,18 @@ Base = declarative_base()
 class User(UserMixin, Base):
     __tablename__ = 'user'
     id            = Column(Integer, primary_key=True)
-    email         = Column(String)
+    username         = Column(String)
+    full_name = Column(String)
     pw_hash       = Column(String)
     authenticated = Column(Boolean, default=False)
-    museum_museum = Column(Boolean)
+    museum_literature = Column(Boolean)
     museum_photography = Column(Boolean)
     museum_painting = Column(Boolean)
-    post = relationship("Post")
+    piece = relationship("Piece")
 
     def __repr__(self):
       return "<User: %s, password: %s>" % (
-        self.email, self.pw_hash)
+        self.username, self.pw_hash)
 
     def set_password(self, password):
         self.pw_hash = generate_password_hash(password)
@@ -32,7 +33,7 @@ class Piece(Base):
 	__tablename__= 'Piece'
 	id = Column(Integer, primary_key=True)
 	title = Column(String)
-	museum_music = Column(Boolean)
+	museum_literature = Column(Boolean)
 	museum_photography = Column(Boolean)
 	museum_painting = Column(Boolean)
 	description = Column(String)
