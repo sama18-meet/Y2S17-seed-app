@@ -43,6 +43,7 @@ def my_feed():
 	return render_template('my_feed.html',pieces=pieces)
 @app.route('/profile/<int:user_id>/')
 def profile():
+	user_pieces=session.query(Piece).filter_by(id=user_id)
 	return render_template ('my_profile.html')
 
 @app.route('/discover/<int:user_id>')
