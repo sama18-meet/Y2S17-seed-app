@@ -35,16 +35,20 @@ def sign_up():
 			,museum_painting= museum_painting)
 		session.add(user)
 		session.commit()
-		return render_template ('my_feed.html')
+		return render_template('my_feed.html')
 
 @app.route('/my_feed/<int:user_id>/') 
-def my_feed():
+def my_feed(user):
 	pieces = session.query(Piece).all()
 	return render_template('my_feed.html',pieces=pieces)
+
+
 @app.route('/profile/<int:user_id>/')
 def profile():
 	user_pieces=session.query(Piece).filter_by(id=user_id)
 	return render_template ('my_profile.html')
+
+
 
 @app.route('/discover/<int:user_id>')
 def discover():
