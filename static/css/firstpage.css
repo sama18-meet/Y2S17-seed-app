@@ -1,8 +1,27 @@
-form { 
-	background-color: MistyRose;
+.form { 
+	/*background-color: FireBrick;*/
  }
- h3 {
-	font-family: Avantgarde;
- 	text-align: center;
-	font-size: 48px;
+
+body {
+    background-image: url("art.jpg");
+    /*background-position: bottom bottom*/ 
+    /*color:white;*/
+ }
+ 
+
+ img{
+float: right;
+margin-right: 0px 0px 0px 30px;
+
 }
+
+ h3 {
+ 	font-family: Avantgarde;
+ 	text-align: center; 
+	background-image:;
+}
+
+h1 {
+    color: white;
+}
+
