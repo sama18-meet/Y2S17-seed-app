@@ -9,10 +9,10 @@ Base = declarative_base()
 class User(UserMixin, Base):
     __tablename__ = 'user'
     id            = Column(Integer, primary_key=True)
-    username         = Column(String)
-    full_name = Column(String)
+    username      = Column(String)
+    full_name     = Column(String)
     pw_hash       = Column(String)
-    authenticated = Column(Boolean, default=False)
+    authenticated     = Column(Boolean, default=False)
     museum_literature = Column(Boolean)
     museum_photography = Column(Boolean)
     museum_painting = Column(Boolean)

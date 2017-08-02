@@ -33,12 +33,12 @@ def login_handler(request):
 
     email = request.form.get('email')
     pw    = request.form.get('pw')
-    user  = session.query(User).filter_by(email=email) 
+    user  = session.query(User).filter_by(username=email) 
     if user.count() == 1:
         user = user.first()
         if user.check_password(pw):
             login_user(user)
-            return redirect(url_for('protected'))
+            return redirect(url_for('my_feed'))
         return 'Wrong Password'
     return 'Bad login'
 
@@ -46,3 +46,21 @@ def login_handler(request):
 def logout_handler():
     logout_user()
     return 'Logged out'
+
+
+def sign_up_handler(request):
+    new_full_name = request.form.get('full_name')
+    new_username  = request.form.get('username')
+    new_pw        = request.form.get('password')
+    museum_music  = request.form.get('museum_music_choice')
+    museum_photography = request.form.get('museum_photography_choice')
+    museum_painting    = request.form.get('museum_painting_choice')
+    user = User(
+        full_name=new_full_name, 
+        username=new_username
+    )
+    user.set_password(new_pw)
+    session.add(user)
+    session.commit()
+    login_user(user)
+    return redirect(url_for('my_feed'))
