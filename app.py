@@ -48,6 +48,19 @@ def about_us():
 def discover():
 	return render_template('discover.html')
 
+@app.route('/post/', methods=['GET', 'POST'])
+def post():
+	if request.method == 'GET':
+		return render_template('/post.html')
+	else:
+		pic_url=request.form.get('pic_url')
+		description = request.form.get('descripton')
+		piece=Piece(pic_url = pic_url, description = description)
+		session.add(piece)
+		session.commit()
+		return redirect(url_for('/my_feed'))
+
+
 
 ########### LOGIN USER / SIGN UP #################
 
@@ -61,7 +74,7 @@ def logout():
   return logout_handler()
 
 
-@app.route('/sign-up', methods=["GET", "POST"])
+@app.route('/', methods=["GET", "POST"])
 def sign_up():
     if request.method == 'GET':
         return render_template('sign_in.html')

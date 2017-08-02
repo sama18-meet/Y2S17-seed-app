@@ -19,8 +19,8 @@ class User(UserMixin, Base):
     piece = relationship("Piece")
 
     def __repr__(self):
-      return "<User: %s, password: %s>" % (
-        self.username, self.pw_hash)
+        return "<User: %s, password: %s>" % (
+            self.username, self.pw_hash)
 
     def set_password(self, password):
         self.pw_hash = generate_password_hash(password)
@@ -32,15 +32,16 @@ class User(UserMixin, Base):
 class Piece(Base):
 	__tablename__= 'Piece'
 	id = Column(Integer, primary_key=True)
-	title = Column(String)
-	museum_literature = Column(Boolean)
-	museum_photography = Column(Boolean)
-	museum_painting = Column(Boolean)
+	## title = Column(String)
+	## museum_literature = Column(Boolean)
+	## museum_photography = Column(Boolean)
+	## museum_painting = Column(Boolean)
 	description = Column(String)
 	pic_url = Column(String)
-	likes = Column(Integer)
+	##likes = Column(Integer)
 	user_id = Column(Integer, ForeignKey('user.id'))
-
+    
+    
 
 
 
