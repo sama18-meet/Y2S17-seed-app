@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/firstpage.css')}}">
-	<title> Sign Up/In </title>
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/firstpage.css')}}">
+
+<title> Sign Up/In </title>
+
 </head>
 <body>
-	<div class="form">
-		<img id="logo" src= "static/img/logo.png"/>
-		<form action="{{url_for('sign_up')}}" method="post">
+<div class="form">
+<img id = 'logo' src= "static/img/logo.png" >
+<form>
+<h3> Sign Up: </h3> <br>
+<input type="text" name= "full_name" placeholder="Your Full Name"> <br>
+<input type="text" name="username" placeholder = "Username"> <br>
+<input type = "password" name = "password" placeholder="Password"> <br>
+<h4> Art that I like: </h4> <br>
+<input type="checkbox" name="museum_literature_choice"> Literature
+<input type="checkbox" name="museum_photography_choice"> Photography
+<input type="checkbox" name="museum_painting_choice"> Painting
+		<input type="submit" value = "Sign up"> -->
 
-			<h1> Sign Up: </h1> <br>
-			<input type="text" name= "full_name" placeholder="Your Full Name"> <br>
-			<input type="text" name="username" placeholder = "Username"> <br>
-			<input type = "password" name = "password" placeholder="Password"> <br>
-			
-			<h4> Art that I like: </h4> <br>
-			<input type="checkbox" name="museum_literature_choice"> Literature
-			<input type="checkbox" name="museum_photography_choice"> Photography
-			<input type="checkbox" name="museum_painting_choice"> Painting
-
-			<br><br>
-			<input type="submit" value="Sign up">
-
-		</form>
-	</div>
+<br> <br> <br>
+	<!-- <h1> Sign Up: </h3> <br>
+		<input type="text" name= "full_name" placeholder="Your Full Name"> <br>
+		<input type="text" name="username" placeholder = "Username"> <br>
+		<input type = "password" name = "password" placeholder="Password"> <br>
+	<h4> Art that I like: </h4> <br>
+		<input type="checkbox" name="museum_choice"> Classical Music
+		<input type="checkbox" name="museum_choice"> Photography
+		<input type="checkbox" name="museum_choice"> Painting
+		<input type="checkbox" name="museum_choice"> Pop Music
 	<br> <br> <br>
+		<input type="checkbox" name="agree" checked> I agree to all terms of service
+	<br>
 
-	<form action="{{url_for('login')}}" method="post">
-		Sign In: <br>
-		<input type="text" name= "email" placeholder="Enter Your Username"> <br>
-		<input type="password" name="pw" placeholder = "Enter Your Password"> <br>
-		<input type="submit" value = "Sign in">
-	</form>
+</form>
+</div>
+<br> <br> <br>
+
+<form>
+Sign In: <br>
+<input type="text" name= "username" placeholder="Enter Your Username"> <br>
+<input type="password" name="password" placeholder = "Enter Your Password"> <br>
+<input type="submit" value = "Sign in">
+
+
+</form>
 
 
 </body>
