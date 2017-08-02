@@ -55,10 +55,11 @@ def post():
 		return render_template('/post.html')
 	else:
 		pic_url=request.form.get('pic_url')
-		description = request.form.get('descripton')
+		description = request.form.get('description')
 		piece=Piece(pic_url = pic_url, description = description)
 		session.add(piece)
 		session.commit()
+		print(description)
 		return redirect(url_for('my_feed'))
 
 
