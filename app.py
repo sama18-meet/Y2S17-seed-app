@@ -38,6 +38,7 @@ def my_feed():
 
 @app.route('/profile/')
 def profile():
+	my_pieces = session.query(Piece).filter_by(id = current_user.id)
 	return render_template ('profile.html')
 
 @app.route('/about-us/')

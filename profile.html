@@ -5,11 +5,11 @@
 
 <body>
 <div id = "profile-page">
-<h1> {{user.full_name}}</h1>
+<h1> {{current_user.full_name}}</h1>
 
 <div id= "user-upload">
-					{% for pieces in user_pieces %}
-		<div class="Piece">
+{% for pieces in pieces %}
+<div class="Piece">
 				<div id='header'>
 					
 					</div>
@@ -21,16 +21,18 @@
 						<p>{{piece.text}}</p>{% endif %}
 					</div>
 					<div class='img'>
-						{% if piece.pic_url != None %} <img src="{{piece.pic_url}}"> {%endif %}
+						{% if piece.pic_url != None %} <img src="{{piece.pic_url}}">
+						{% endif %}
+						</div>
 						<div class='description'>
 							{{piece.description}}
 						</div>
 						<div class='likes'>
 							{{piece.likes}}
-					</div>{% endfor %}
+						</div>
+						{% endfor %}
 				</div>
 			</div>
-		</div>
 
 
 
