@@ -9,40 +9,39 @@
 				<h1>LOGO</h1>
 				<a href="{{url_for('profile')}}">My Profile</a>
 				<a href="{{url_for('my_feed')}}">My Feed</a>
-				<a href="{{url_for('discover')}}">
-				Discover</a>
+				<a href="{{url_for('discover')}}">Discover</a>
 				<a href="{{url_for('post')}}">Post</a>
 				<a href="{{url_for('about_us')}}">About Us</a>
 				<a href="{{url_for('logout')}}">Logout</a>
 			</div>
-			{{current_user.username}}
+			<h2> Hello {{current_user.username}} </h2>
 			<div id='feed'>
 				{% for piece in pieces %}
 					<div class="Piece">
-						<div id='header'>
+					<!--
 							<div class="piece_user">
-								{{piece.user_id}}
-							</div>
-							<div class='title'>
+								Piece by {{piece.user_username}}
+							</div>   -->
+						<!--	<div class='title'>
 								{{piece.title}}
-							</div><!--Checking whether piece is text or image-->
+							</div>
 							<div class='text'>
 								{% if piece.text != None %}
 									<p>{{piece.text}}</p>
 								{% endif %}
 							</div>
+							<div class='likes'>
+								{{piece.likes}}
+							</div> -->
 							<div class='img'>
 								{% if piece.pic_url != None %}
 									<img src="{{piece.pic_url}}">
 								{%endif %}
 							</div>
 							<div class='description'>
-								{{piece.description}}
+								{{ piece.description }}
 							</div>
-							<div class='likes'>
-								{{piece.likes}}
-							</div>
-						</div>
+
 					</div>
 				{% endfor %}
 			</div>

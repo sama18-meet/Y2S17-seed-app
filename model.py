@@ -40,7 +40,7 @@ class Piece(Base):
 	pic_url = Column(String)
 	##likes = Column(Integer)
 	user_id = Column(Integer, ForeignKey('user.id'))
-    
+   
     
 
 

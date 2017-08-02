@@ -45,7 +45,8 @@ def login_handler(request):
 
 def logout_handler():
     logout_user()
-    return 'Logged out'
+    return redirect('/')
+
 
 
 def sign_up_handler(request):
