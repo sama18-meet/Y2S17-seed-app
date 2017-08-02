@@ -38,7 +38,7 @@ def my_feed():
 
 @app.route('/profile/')
 def profile():
-	return render_template ('my_profile.html')
+	return render_template ('profile.html')
 
 @app.route('/about-us/')
 def about_us():
