@@ -41,9 +41,9 @@ def profile():
 	my_pieces = session.query(Piece).filter_by(id = current_user.id)
 	return render_template ('profile.html')
 
-@app.route('/about-us/')
+@app.route('/about_us/')
 def about_us():
-	return render_template ('my_profile.html')
+	return render_template ('about_us.html')
 
 @app.route('/discover/')
 def discover():
