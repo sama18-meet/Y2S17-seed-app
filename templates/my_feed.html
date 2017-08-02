@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/firstpage.css')}}">
+
 	<title>My Feed</title>
 </head>
 	<body>
 		<div id="container">
 			<div id="header">
-				<h1>LOGO</h1>
+				<img id = 'logo' src = "static/img/logo.png">
 				<a href="{{url_for('profile')}}">My Profile</a>
 				<a href="{{url_for('my_feed')}}">My Feed</a>
 				<a href="{{url_for('discover')}}">

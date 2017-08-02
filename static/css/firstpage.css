@@ -4,6 +4,9 @@
 
 body {
     background-image: url("art3.jpg");
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    overflow: hidden;
     /*background-position: bottom bottom*/ 
     /*color:white;*/
  }
@@ -13,14 +16,15 @@ body {
 float: right;
 margin-right: 200px;
 margin-bottom: 1000px;
-width: 400px;
+width: 600px;
 }
 
-img:static/img/logo.png {
+/*img:static/img/logo.png {
  	width: 1000px;
  	height: 150px;
  	top: 50px;
  	left: 100px;
+ 	*/
 }
 
  h3 {
@@ -32,3 +36,5 @@ img:static/img/logo.png {
 h1 {
     color: white;
 }
+
+
