@@ -58,7 +58,7 @@ def post():
 		piece=Piece(pic_url = pic_url, description = description)
 		session.add(piece)
 		session.commit()
-		return redirect(url_for('/my_feed'))
+		return redirect(url_for('my_feed'))
 
 
 
