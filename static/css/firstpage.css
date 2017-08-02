@@ -3,25 +3,32 @@
  }
 
 body {
-    background-image: url("art.jpg");
+    background-image: url("art3.jpg");
     /*background-position: bottom bottom*/ 
     /*color:white;*/
  }
  
 
- img{
+#logo {							
 float: right;
-margin-right: 0px 0px 0px 30px;
-
+margin-right: 200px;
+margin-bottom: 1000px;
+width: 400px;
 }
+
+/*img:logo.png {
+ 	width: 1000px;
+ 	height: 150px;
+ 	top: 50px;
+ 	left: 100px;
+}*/
 
  h3 {
  	font-family: Avantgarde;
  	text-align: center; 
-	background-image:;
-}
+ 	background-image:;
+ }
 
 h1 {
     color: white;
 }
-
