@@ -16,17 +16,17 @@ margin-bottom: 1000px;
 width: 400px;
 }
 
-/*img:logo.png {
+img:static/img/logo.png {
  	width: 1000px;
  	height: 150px;
  	top: 50px;
  	left: 100px;
-}*/
+}
 
  h3 {
  	font-family: Avantgarde;
- 	text-align: center; 
- 	background-image:;
+ 	text-align: left; 
+ 	color: white;
  }
 
 h1 {
