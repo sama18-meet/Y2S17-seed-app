@@ -1,4 +1,5 @@
 import sys
+from login import *
 
 # flask imports
 from flask import Flask, Response, render_template, request, redirect, url_for
@@ -24,7 +25,6 @@ session = DBSession()
 @app.route('/my_feed/')
 def my_feed():
 	pieces = session.query(Piece).all()
-	# print ("my user %s" % current_user, file=sys.stderr)
 	# favorites_pieces = []
 	# if user.museum_literature == True:
 	# 	favorites_pieces.append(museum_literature)
@@ -37,6 +37,7 @@ def my_feed():
 
 
 @app.route('/profile/')
+@login_required
 def profile():
 	my_pieces = session.query(Piece).filter_by(id = current_user.id)
 	return render_template ('profile.html')
@@ -59,7 +60,6 @@ def post():
 		piece=Piece(pic_url = pic_url, description = description)
 		session.add(piece)
 		session.commit()
-		print(description)
 		return redirect(url_for('my_feed'))
 
 
