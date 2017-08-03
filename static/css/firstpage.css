@@ -12,18 +12,24 @@ body {
     /*background-position: bottom bottom*/ 
     /*color:white;*/
  }
+
+ #sign_in {
+    overflow-y: hidden;
+ }
  
 
 
  .img {
- 	margin: left; 
+ 	margin-left: 10px;
+    max-height: 50%;
+    max-width:50%;  
  }
 
 #logo {							
 float: right;
-margin-right: 20px; /*this was 200*/
-margin-bottom: 10px; /* this was 1000 */
-width: 60px; /*this was 600*/
+margin-right: 40px; /*this was 200*/
+margin-bottom: 400px; /* this was 1000 */
+width: 75%; /*this was 600*/
 }
 
 /*img:static/img/logo.png {
@@ -59,7 +65,7 @@ MY FEED
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 25px;
 }
 
 /* Change the color of links on hover */
