@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/firstpage.css')}}">
+
+	<title>My Feed</title>
+</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<img id = 'logo' src = "static/img/logo.png">
+				<a href="{{url_for('profile')}}">My Profile</a>
+				<a href="{{url_for('my_feed')}}">My Feed</a>
+				<a href="{{url_for('discover')}}">Discover</a>
+				<a href="{{url_for('post')}}">Post</a>
+				<a href="{{url_for('about_us')}}">About Us</a>
+				<a href="{{url_for('logout')}}">Logout</a>
+			</div>
+			<h2> Hello {{current_user.username}} </h2>
+			<div id='feed'>
+				{% for piece in pieces %}
+					<div class="Piece">
+					
+							<div class="piece_user">
+								Piece by {{current_user.username}}
+							</div> 
+						<!--	<div class='title'>
+								{{piece.title}}
+							</div>
+							<div class='text'>
+								{% if piece.text != None %}
+									<p>{{piece.text}}</p>
+								{% endif %}
+							</div>
+							<div class='likes'>
+								{{piece.likes}}
+							</div> -->
+							{% if piece.pic_url != None %}
+							<div class='img'>
+								
+									<img src="{{piece.pic_url}}">
+								
+							</div>
+							<div class='description'>
+								{{ piece.description }}
+							</div>
+							{%endif %}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</body>
+</html>

@@ -31,7 +31,7 @@ def login_handler(request):
     if request.method == 'GET':
         return render_template('login.html')
 
-    email = request.form.get('email')
+    username = request.form.get('email')
     pw    = request.form.get('pw')
     user  = session.query(User).filter_by(username=email) 
     if user.count() == 1:
@@ -46,7 +46,6 @@ def login_handler(request):
 def logout_handler():
     logout_user()
     return redirect('/')
-
 
 
 def sign_up_handler(request):
@@ -64,4 +63,5 @@ def sign_up_handler(request):
     session.add(user)
     session.commit()
     login_user(user)
+
     return redirect(url_for('my_feed'))
