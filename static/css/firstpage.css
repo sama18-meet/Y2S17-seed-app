@@ -14,6 +14,11 @@ body {
  }
  
 
+
+ .img {
+ 	margin: left; 
+ }
+
 #logo {							
 float: right;
 margin-right: 20px; /*this was 200*/
