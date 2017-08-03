@@ -8,15 +8,23 @@
 	<body>
 		<div id="container">
 			<div id="header">
-				<img id = 'logo' src = "static/img/logo.png">
-				<a href="{{url_for('profile')}}">My Profile</a>
+				<div class="topnav" id="myTopnav">
+	<a href="{{url_for('profile')}}">My profile</a>
+ 	<a href="{{url_for('my_feed')}}/">My Feed</a>
+ 	<a href="{{url_for('discover')}}">Discover</a>
+ 	<a href="{{url_for('post')}}">Post</a>
+ 	<a href="{{url_for('about_us')}}">About us</a>
+ 	<a href="{{url_for('logout')}}">Log out</a>
+	</div>
+				<!-- <img id = 'logo' src = "static/img/logo.png"> -->
+		<!-- 		<a href="{{url_for('profile')}}">My Profile</a>
 				<a href="{{url_for('my_feed')}}">My Feed</a>
 				<a href="{{url_for('discover')}}">
 				Discover</a>
 				<a href="{{url_for('post')}}">Post</a>
 				<a href="{{url_for('about_us')}}">About Us</a>
 				<a href="{{url_for('logout')}}">Logout</a>
-			</div>
+		 -->	</div>
 			{{current_user.username}}
 			<div id='feed'>
 				{% for piece in pieces %}
@@ -49,5 +57,21 @@
 				{% endfor %}
 			</div>
 		</div>
+		<br><br><br>	
+		<!--
+		<div style= "background-color:MistyRose; display:inline-block;align-content:center;"">
+		<Center>
+		<ul>
+		<li><a href="/category/My Profile">My Profile</a></li>
+		<li><a href="/category/My Feed">My Feed</a></li>
+		<li><a href="/category/Discover">Discover</a></li>
+		<li><a href="/category/Post">Post</a></li>
+		<li><a href="/category/ About us">About us</a></li>
+		<li><a href="/category/Log out">Log out</a></li>
+		</ul>
+		</Center>
+		</div>
+		!-->
+
 	</body>
 </html>
