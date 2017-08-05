@@ -35,7 +35,6 @@ def my_feed():
 	# pieces = session.query(Piece).filter_by(favorites_pieces)
 	return render_template('my_feed.html',pieces=pieces)
 
-
 @app.route('/profile/')
 @login_required
 def profile():
@@ -56,8 +55,9 @@ def post():
 		return render_template('/post.html')
 	else:
 		pic_url=request.form.get('pic_url')
+		title = request.form.get('title')
 		description = request.form.get('description')
-		piece=Piece(pic_url = pic_url, description = description)
+		piece=Piece(title = title, pic_url = pic_url, description = description, story = story)
 		session.add(piece)
 		session.commit()
 		return redirect(url_for('my_feed'))

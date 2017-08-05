@@ -30,18 +30,18 @@ class User(UserMixin, Base):
 
 
 class Piece(Base):
-	__tablename__= 'Piece'
-	id = Column(Integer, primary_key=True)
-	## title = Column(String)
-	## museum_literature = Column(Boolean)
-	## museum_photography = Column(Boolean)
-	## museum_painting = Column(Boolean)
-	description = Column(String)
-	pic_url = Column(String)
-	##likes = Column(Integer)
-	user_id = Column(Integer, ForeignKey('user.id'))
-   
-    
+    __tablename__= 'Piece'
+    id = Column(Integer, primary_key=True)
+    title = Column(String)
+    ## museum_literature = Column(Boolean)
+    ## museum_photography = Column(Boolean)
+    ## museum_painting = Column(Boolean)
+    description = Column(String)
+    pic_url = Column(String)
+    ##likes = Column(Integer)
+    user_id = Column(Integer, ForeignKey('user.id'))
+
+
 
 
 
