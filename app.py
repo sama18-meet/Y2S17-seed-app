@@ -57,7 +57,7 @@ def post():
 		pic_url=request.form.get('pic_url')
 		title = request.form.get('title')
 		description = request.form.get('description')
-		piece=Piece(title = title, pic_url = pic_url, description = description, story = story)
+		piece=Piece(title = title, pic_url = pic_url, description = description,)
 		session.add(piece)
 		session.commit()
 		return redirect(url_for('my_feed'))

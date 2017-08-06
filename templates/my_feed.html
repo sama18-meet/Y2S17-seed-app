@@ -8,14 +8,16 @@
 	<body class="my-feed">
 		<div id="container">
 			<div id="header">
-				<div class="topnav" id="myTopnav">
-	<a href="{{url_for('profile')}}">My profile</a>
- 	<a href="{{url_for('my_feed')}}">My Feed</a>
- 	<a href="{{url_for('discover')}}">Discover</a>
- 	<a href="{{url_for('post')}}">Post</a>
- 	<a href="{{url_for('about_us')}}">About us</a>
- 	<a href="{{url_for('logout')}}">Log out</a>
+				<div class="vertical-menu" id="myTopnav">
+	<a href="{{url_for('profile')}}" class="active" float: left;>My profile</a>
+ 	<a href="{{url_for('my_feed')}}" class="active">My Feed</a>
+ 	<a href="{{url_for('discover')}}" class="active">Discover</a>
+ 	<a href="{{url_for('post')}}" class="active">Post</a>
+ 	<a href="{{url_for('about_us')}}"" class="active">About us</a>
+ 	<a href="{{url_for('logout')}}" class="active">Log out</a>
 	</div>
+	--
+
 				<!-- <img id = 'logo' src = "static/img/logo.png"> -->
 		<!-- 		<a href="{{url_for('profile')}}">My Profile</a>
 				<a href="{{url_for('my_feed')}}">My Feed</a>
@@ -28,7 +30,7 @@
 			</div>
 			<br>
 
-			<h1><b> . {{current_user.full_name}} </b></h1>
+			<h1><b> HELLO {{current_user.full_name}} </b></h1>
 			<div id='feed'>
 				{% for piece in pieces %}
 					<div class="Piece">
@@ -36,9 +38,7 @@
 							<div class="piece_user">
 								Piece by {{piece.user_username}}
 							</div>   -->
-						<!--	<div class='title'>
-								{{piece.title}}
-							</div>
+						<!--	
 							<div class='text'>
 								{% if piece.text != None %}
 									<p>{{piece.text}}</p>
@@ -47,6 +47,11 @@
 							<div class='likes'>
 								{{piece.likes}}
 							</div> -->
+							<div class='title'>
+							{% if piece.title != None %}
+								{{piece.title}}
+							{% endif %}
+							</div>
 							<div class='img' background-color=brown>
 								{% if piece.pic_url != None %}
 									<img src="{{piece.pic_url}}">

@@ -1,6 +1,7 @@
 /*sign in page*/
 
 .form { 
+    align-content: center
     width: 40%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -9,7 +10,33 @@
     border-radius: 4px;
     box-sizing: border-box;
 	/*background-color: FireBrick;*/
+
+}
+
+
+.container {
+        width: 500px;
+        clear: both;
+        text-align: center;
+    }
+.container input {
+        width: 100%;
+        clear: both;
+        text-align: center;
+    }
+
+
+.form2 {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
  }
+
 
 body {
     background-image: url("art3.jpg");
@@ -45,6 +72,7 @@ body {
 .text {
     font-style: italic;
     font: italic bold 24px/60px Georgia, serif;
+    color: black;
  }
 
 
@@ -63,23 +91,35 @@ margin-bottom: 400px; /* this was 1000 */
 width: 75%; /*this was 600*/
 }
 
-/*img:static/img/logo.png {
+/img:static/img/logo.png {
  	width: 1000px;
  	height: 150px;
  	top: 50px;
  	left: 100px;
- 	*/
-/*}*/
+ 	}
+
 
 h3 {
  	font-family: Avantgarde;
- 	text-align: left; 
+ 	text-align: center; 
  	color: white;
  }
 
 h1 {
     color: white;
 }
+#slogan{
+    color:black;
+    font-weight: bold;
+    text-align:center;
+    font-family: Arial;
+
+}
+
+#myart{
+    color:purple;
+}
+
 
 MY FEED
 /* Add a black background color to the top navigation */
@@ -110,4 +150,36 @@ MY FEED
     background-color: #4CAF50;
     color: white;
 }
+-------------
+
+.vertical-menu {
+    width: 100px; /* Set a width if you like */
+    background-color: #333;
+    overflow: hidden;
+}
+
+.vertical-menu a {
+    
+    width: 10%;
+    background-color: #4CAF50; /* Grey background color */
+    color: white; /* text color */
+    display: block; /* Make the links appear below each other */
+    padding: 14px 16px; /* Add some padding */    
+    text-decoration: none; /* Remove underline from links */
+    font-size: 25px;
+}
+
+.vertical-menu a:hover {
+    background-color: #ddd; /* Dark grey background on mouse-over */
+    color: black;
+}
+
+.vertical-menu a.active {
+    background-color: #B3B6B7 ; /* Add a green color to the "active/current" link */
+    opacity: .2; 
+    color: white;
+     
+
+}
+
 
