@@ -22,7 +22,7 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 
-@app.route('/my_feed/')
+@app.route('/my_feed', methods=["GET", "POST"])
 def my_feed():
 	pieces = session.query(Piece).all()
 	# favorites_pieces = []
@@ -35,21 +35,21 @@ def my_feed():
 	# pieces = session.query(Piece).filter_by(favorites_pieces)
 	return render_template('my_feed.html',pieces=pieces)
 
-@app.route('/profile/')
+@app.route('/profile')
 @login_required
 def profile():
 	my_pieces = session.query(Piece).filter_by(id = current_user.id)
 	return render_template ('profile.html')
 
-@app.route('/about_us/')
+@app.route('/about_us')
 def about_us():
 	return render_template ('about_us.html')
 
-@app.route('/discover/')
+@app.route('/discover')
 def discover():
 	return render_template('discover.html')
 
-@app.route('/post/', methods=['GET', 'POST'])
+@app.route('/post', methods=['GET', 'POST'])
 def post():
 	if request.method == 'GET':
 		return render_template('/post.html')
