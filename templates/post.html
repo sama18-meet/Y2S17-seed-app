@@ -7,35 +7,21 @@
 
 
 <body>
-
-<h3 class='text'> Post a Picture </h3>
-<form  action="{{url_for('post')}}" method="post">
-
-<div id =post_page>
 <div id = 'post_info'>
-<h1>Want to Share your art? Follow these simple steps:</h1>
-<ol>
-<li>Enter the title of your art</li>
-<li>Add the URL for your picture</li>
-<li>Write a description of your masterpiece!</li>
-</ol>
+	<h1 class='text' >Want to Share your art? Follow these simple steps:</h1>
+	<ol>
+	<li class = 'smalltext'>Enter the title of your art</li>
+	<li class = 'smalltext'>Add the URL for your picture</li>
+	<li class = 'smalltext'>Write a description of your masterpiece!</li>
+	</ol>
 </div>
 
-
-<!--<textarea name = "story" placeholder = "Share Your Story"> </textarea><br> -->
-<input class='form' type="text" name="pic_url" placeholder="Enter URL"> <br>
-<input class='form' type="text" name="description" placeholder="Describe your piece"> <br>
-<!--<input type="text" name="tags" placeholder="Add tags..."> <br>
-Select Museums: <br>
-<input type="checkbox" name="museum"> Classical Music
-<input type="checkbox" name="museum"> Photography
-<input type="checkbox" name="museum"> Painting
-<input type="checkbox" name="museum"> Pop Music
-<br> -->
-<input class='form' type="submit" name="post_submit">
+<form  action="{{url_for('post')}}" method="post">
+	<input class='form' type="text" name="pic_url" placeholder="Enter URL"> <br>
+	<input class='form' type="text" name="description" placeholder="Describe your piece"> <br>
+	<input class='form' type="submit" name="post_submit">
 
 </form>
-</div>
 
 </body>
 
