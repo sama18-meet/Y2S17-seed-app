@@ -68,12 +68,11 @@ def post():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    return login_handler(request)
+	if request.method == 'GET':
+		return render_template('login.html')
+	else:
+		return login_handler(request)	
 
-
-@app.route('/logout')
-def logout():
-  return logout_handler()
 
 
 @app.route('/', methods=["GET", "POST"])
@@ -82,3 +81,19 @@ def sign_up():
         return render_template('sign_in.html')
     else:
     	return sign_up_handler(request)
+
+
+@app.route('/logout')
+def logout():
+	return logout_handler()    	
+
+
+
+
+
+
+
+
+
+
+
