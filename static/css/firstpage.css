@@ -154,14 +154,14 @@ MY FEED
 
 .vertical-menu {
     width: 100px; /* Set a width if you like */
-    background-color: #333;
+    background-color: #B3B6B7;
     overflow: hidden;
 }
 
 .vertical-menu a {
     
     width: 10%;
-    background-color: #4CAF50; /* Grey background color */
+    background-color: #B3B6B7; /* Grey background color */
     color: white; /* text color */
     display: block; /* Make the links appear below each other */
     padding: 14px 16px; /* Add some padding */    
@@ -169,17 +169,34 @@ MY FEED
     font-size: 25px;
 }
 
-.vertical-menu a:hover {
-    background-color: #ddd; /* Dark grey background on mouse-over */
+.vertical-menu a.hover {
+    background-color: #B3B6B7; /* Dark grey background on mouse-over */
     color: black;
 }
 
 .vertical-menu a.active {
     background-color: #B3B6B7 ; /* Add a green color to the "active/current" link */
-    opacity: .2; 
-    color: white;
+    opacity: .1; 
+    color: #1B2631;
      
 
 }
-
-
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.button {
+ background-color: #B3B6B7; /* Green */
+ opacity: .9; 
+    border: none;
+    color: white;
+    width: 200px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
