@@ -21,7 +21,7 @@ body {
  }
 
  .sign-in {
-    overflow: hidden;
+    
  }
 
 
@@ -31,7 +31,7 @@ body {
     height: 300px;
     width:300px;  
     overflow: hidden;
-    border: 15px solid #3e2b44;
+    border: 15px solid #66CDAA;
     padding: 0px;
     background-position: center center;
     background-repeat: no-repeat;
