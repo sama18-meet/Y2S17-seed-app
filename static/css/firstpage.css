@@ -20,10 +20,10 @@ body {
     /*color:white;*/
  }
 
- #sign_in {
-    overflow-y: hidden;
+ .sign-in {
+    overflow: hidden;
  }
- 
+
 
 
  .img {
