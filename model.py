@@ -33,6 +33,7 @@ class Piece(Base):
     __tablename__= 'Piece'
     id = Column(Integer, primary_key=True)
     title = Column(String)
+    ##story = Column(String)
     ## museum_literature = Column(Boolean)
     ## museum_photography = Column(Boolean)
     ## museum_painting = Column(Boolean)

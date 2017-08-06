@@ -150,6 +150,7 @@ MY FEED
     background-color: #4CAF50;
     color: white;
 }
+<<<<<<< HEAD
 -------------
 
 .vertical-menu {
@@ -199,4 +200,17 @@ MY FEED
     cursor: pointer;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
+=======
+#summary-title{
+    text-align: center;
+    font-size: 40px;
+    font-family: sans-serif;
+}
+#AU-paragraph{
+    text-align: center;
+    font-size: 20px;
+    border: 12px solid #3e2b44;
+    border-radius: 25px
+    
+>>>>>>> 68f2dbb9e0b9355b78922c3e77b7287c94270155
 }
