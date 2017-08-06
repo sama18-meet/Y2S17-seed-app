@@ -150,8 +150,7 @@ MY FEED
     background-color: #4CAF50;
     color: white;
 }
-<<<<<<< HEAD
--------------
+
 
 .vertical-menu {
     width: 100px; /* Set a width if you like */
@@ -190,6 +189,7 @@ MY FEED
  opacity: .9; 
     border: none;
     color: white;
+    shape
     width: 200px;
     padding: 15px 32px;
     text-align: center;
@@ -200,7 +200,6 @@ MY FEED
     cursor: pointer;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
-=======
 #summary-title{
     text-align: center;
     font-size: 40px;
