@@ -5,7 +5,7 @@
 
 	<title>My Feed</title>
 </head>
-	<body>
+	<body class="my-feed">
 		<div id="container">
 			<div id="header">
 				<div class="topnav" id="myTopnav">
@@ -24,7 +24,9 @@
 			<br>
 
 
+
 			<h1 id = 'greet'> Hello {{full_name}} </b></h1>
+
 			<div id='feed'>
 				{% for piece in pieces %}
 					<div class="Piece">
@@ -48,6 +50,8 @@
 							</div><br>
 
 							<div class='img'>
+
+							<div class='img' background-color=brown>
 								{% if piece.pic_url != None %}
 									<img src="{{piece.pic_url}}">
 								{% endif %}
