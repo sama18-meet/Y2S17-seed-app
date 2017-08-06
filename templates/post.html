@@ -7,10 +7,11 @@
 
 
 <body>
-<form action="{{url_for('post')}}" method="post">
+<h3 class='text'> Post a Picture </h3>
+<form  action="{{url_for('post')}}" method="post">
 <!--<textarea name = "story" placeholder = "Share Your Story"> </textarea><br> -->
-<input type="text" name="pic_url" placeholder="Enter URL"> <br>
-<input type="text" name="description" placeholder="Describe your piece"> <br>
+<input class='form' type="text" name="pic_url" placeholder="Enter URL"> <br>
+<input class='form' type="text" name="description" placeholder="Describe your piece"> <br>
 <!--<input type="text" name="tags" placeholder="Add tags..."> <br>
 Select Museums: <br>
 <input type="checkbox" name="museum"> Classical Music
@@ -18,7 +19,7 @@ Select Museums: <br>
 <input type="checkbox" name="museum"> Painting
 <input type="checkbox" name="museum"> Pop Music
 <br> -->
-<input type="submit" name="post_submit">
+<input class='form' type="submit" name="post_submit">
 
 </form>
 
