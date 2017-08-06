@@ -25,7 +25,6 @@
 
 
 
-			<h1 id = 'greet'> Hello {{full_name}} </b></h1>
 
 			<div id='feed'>
 				{% for piece in pieces %}
@@ -49,11 +48,18 @@
 							{% endif %}		
 							</div><br>
 
-							<div class='img'>
+							<!--<div class='story'>
+							{% if piece.story == None %}
+								<p></p>
+							{% else %}
+								{{piece.story}}
+							{% endif %} !-->	
 
-							<div class='img' background-color=brown>
+							
+
+							<div class='post_img' background-color=brown>
 								{% if piece.pic_url != None %}
-									<img src="{{piece.pic_url}}">
+									<img src="{{piece.pic_url}}" class="img">
 								{% endif %}
 							</div>
 							<div class='description'>
