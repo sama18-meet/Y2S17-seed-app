@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/firstpage.css')}}">
+	<title> Post a piece </title>
+</head>
+
+
+<body>
+<div id =post_page>
+<div id = 'post_info'>
+<div id = 'post_info'>
+	<h1 class='text' >Want to Share your art? Follow these simple steps:</h1>
+	<ol>
+	<li class = 'smalltext'>Enter the title of your art</li>
+	<li class = 'smalltext'>Add the URL for your picture or write your Story</li>
+	<li class = 'smalltext'>Write a description of your masterpiece!</li>
+	</ol>
+</div>
+</div>
+<form action="{{url_for('post')}}" method="post">
+<input type="text" name="title" placeholder= "What is your Piece called?" size = 35><br>
+<!--<textarea name="story" placeholder="Write your Story"></textarea><!--><br>
+<input type="text" name="pic_url" placeholder="Enter URL" size = 35> <br><br>
+<input type="text" name="description" placeholder="Describe your piece" size = 35> <br><br>
+<!--<input type="text" name="tags" placeholder="Add tags..."> <br>
+Select Museums: <br>
+<input type="checkbox" name="museum"> Classical Music
+<input type="checkbox" name="museum"> Photography
+<input type="checkbox" name="museum"> Painting
+<input type="checkbox" name="museum"> Pop Music
+<br> -->
+<input type="submit" name="post_submit" value="Post">
+<br><br>
+<a href="{{url_for('my_feed')}}">Back To My Feed</a>
+
+
+</form>
+</div>
+
+</body>
+
+</html>

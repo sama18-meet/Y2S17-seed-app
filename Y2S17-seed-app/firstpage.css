@@ -1,0 +1,96 @@
+/*sign in page*/
+.form { 
+	/*background-color: FireBrick;*/
+ }
+
+body {
+    background-image: url("art3.jpg");
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    /*overflow: hidden;*/ /* this turned off scrolling for some reason */
+    /*background-position: bottom bottom*/ 
+    /*color:white;*/
+ }
+
+ #sign_in {
+    overflow-y: hidden;
+ }
+ 
+#post_info {
+	text-align:center;
+	font-family: Arial;
+
+}
+.title{
+	font-weight: bold;
+	font-style: italic;
+	font-size: 34px;
+}
+
+.description {
+	text-align: center;
+}
+
+#logo {							
+float: right;
+margin-right: 40px; /*this was 200*/
+margin-bottom: 400px; /* this was 1000 */
+width: 75%; /*this was 600*/
+}
+
+/*img:static/img/logo.png {
+ 	width: 1000px;
+ 	height: 150px;
+ 	top: 50px;
+ 	left: 100px;
+ 	*/
+/*}*/
+
+ol {
+	display: inline-block;
+}
+
+h3 {
+ 	font-family: Avantgarde;
+ 	text-align: left; 
+ 	color: white;
+ }
+
+h1 {
+    color: white;
+}
+
+#post_page{
+	overflow: fixed;
+}
+
+MY FEED
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+

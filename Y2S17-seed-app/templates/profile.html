@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/firstpage.css')}}">
+<title>My Profile</title>
+</head>
+
+<body>
+<div id = "profile-page">
+<h1> {{user.full_name}}</h1>
+
+<div id= "user-upload">
+{% for pieces in user_pieces %}
+<div class="Piece">
+				<div id='header'>
+					
+					</div>
+					<div class='title'>
+						{{piece.title}}
+					</div><!--Checking whether piece is text or image-->
+					<div class='text'>
+						{% if piece.text != None %}
+						<p>{{piece.text}}</p>{% endif %}
+					</div>
+					<div class='img'>
+						{% if piece.pic_url != None %} <img src="{{piece.pic_url}}"> {%endif %}
+						<div class='description'>
+							{{piece.description}}
+						</div>
+						<div class='likes'>
+							{{piece.likes}}
+						</div>{ % endfor %}
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</body>
